@@ -19,6 +19,3 @@ namespace semana16_1.Controllers
         }
     }
 }
-//ViewData["edad"] = "Hola " + edad;
-//ViewData["correo"] = "Hola " + correo;
-//ViewData["telefono"] = "Hola " + telefono;
