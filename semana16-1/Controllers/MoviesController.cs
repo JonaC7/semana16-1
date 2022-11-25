@@ -20,7 +20,7 @@ namespace semana16_1.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(String search)
         {
             return View(await _context.Movie.ToListAsync());
         }
