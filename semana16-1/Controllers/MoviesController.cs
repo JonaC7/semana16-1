@@ -22,6 +22,11 @@ namespace semana16_1.Controllers
         // GET: Movies
         public async Task<IActionResult> Index(String search)
         {
+            var movies = from m in _context.Movie select m;
+            if (!string.IsNullOrEmpty(search))
+            {
+                movies = movies.Where(s => s.Title.Contains(search));
+            }
             return View(await _context.Movie.ToListAsync());
         }
 
